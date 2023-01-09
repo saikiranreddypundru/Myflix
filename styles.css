@@ -1,0 +1,160 @@
+/* CSS Styles for Website */
+
+body {
+	background: #090909;
+	color: white;
+}
+
+h1 {
+	font-family: 'Bebas Neue', cursive;
+	font-size: 3em;
+	margin: 0;
+	padding-left: 0.4em;
+	padding-top: 0.1em;
+	color: red;
+}
+
+button.btn-primary {
+	padding: 0.5em;
+	background-color: #dd0000;
+	color: white;
+	border: red 2px;
+}
+
+button.btn-primary:hover {
+	border: white 2px;
+	background-color: #ff0000;
+}
+
+footer {
+	padding-top: 5em;
+	text-align: center;
+	font-family: 'Bebas Neue', cursive;
+}
+
+#registerLink {
+	padding: 1em;
+	padding-left: 0;
+	color: red;
+}
+
+#registerLink a {
+	color: #dd0000;
+}
+
+#registerLink a:hover {
+	color: #ff0000;
+}
+
+#registerLink a:hover {
+	color: #ff0000;
+}
+
+#registerLink a:active {
+	color: #ff0000;
+}
+
+#registerLink a:visited {
+	color: #dd0000;
+}
+
+/* Home Page */
+
+#logoutBtn {
+	position: absolute;
+	top: 1.0em;
+	right: 3.0em;
+	padding: 0.5em;
+	background-color: #dd0000;
+	color: white;
+	border: red 2px;
+	border-radius: 4px;
+}
+
+#logoutBtn:hover {
+	border: white 2px;
+	background-color: #ff0000;
+}
+
+.loading-message {
+	text-align: center;
+	width: 100%;
+}
+
+.card {
+	background: black;
+	border-radius: 0;
+	border-color: black;
+	
+	min-width: 150px;
+	width: 100%;
+	position: relative;
+	transition: 0.2s linear;
+	margin: 0.4em;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+.card .movie-label {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 0.1em;
+	background: #00000077;
+}
+
+.card img {
+	border-radius: 0;
+	margin: 0;
+}
+
+.card.empty:hover {
+	border-color: black;
+	transform: scale(1);
+	z-index: 10;
+}
+
+.card:hover {
+	border-color: white;
+	transform: scale(1.1);
+	z-index: 10;
+}
+
+.carousel-item {
+	padding-left: 60px; 
+	padding-right: 60px; 
+}
+
+.carousel {
+	min-height: 50px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+	width: 5%;
+	max-width: 60px;
+	display: inline-block;
+}
+
+@media all and (max-width: 800px) {
+	.carousel-control-prev, .carousel-control-next {
+		position: relative;
+	}
+}
+
+.carousel-item section {
+	display: flex;
+}
+	
+/* Video Playback Page */
+
+#example-video {
+	display: inline-block;
+	margin: 0 auto;
+	position: relative;
+}
+
+#video-player-container {
+	text-align: center;
+	margin: 0 auto;
+}

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<!-- Page Styles -->
+	<link href="styles.css" rel="stylesheet">
+    <title>MyFlix</title>
+  </head>
+  <body>
+    <h1>- MyFlix -</h1>
+	<button id="logoutBtn" onclick="logout();">Log Out</button>
+	<!-- top-ten popular slider -->
+	<div class="slider-box">
+		<section class="container-fluid slider">
+			<div>
+				<p style="margin: 0;"><b>Popular Right Now</b></p>
+			</div>		
+			<div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">  
+			  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			  </button>
+			  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			  </button>
+			  <div id="popularCarousel" class="carousel-inner" style="position: relative; overflow: visible;">
+				<p class="loading-message">Loading Movies...</p>
+			  </div>
+			</div>
+		</section>
+	</div>
+	<!-- genre slider -->
+	<div class="slider-box">
+		<section class="container-fluid slider">
+			<div>
+				<p style="margin: 0;"><b>Comedy</b></p>
+			</div>
+			<div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel"data-bs-interval="false">  			  
+			  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			  </button>
+			  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			  </button>	  
+			  <div id="comedyCarousel" class="carousel-inner" style="position: relative; overflow: visible;">
+				<p class="loading-message">Loading Movies...</p>
+			  </div>
+			</div>
+		</section>
+	</div>
+	<!-- genre 2 slider -->
+	<div class="slider-box">
+		<section class="container-fluid slider">
+			<div>
+				<p style="margin: 0;"><b>Horror</b></p>
+			</div>	
+			<div id="carouselExampleIndicators3" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">  			  
+			  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			  </button>
+			  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			  </button>
+			  <div id="horrorCarousel" class="carousel-inner" style="position: relative; overflow: visible;">
+				<p class="loading-message">Loading Movies...</p>
+			  </div>
+			</div>
+		</section>
+	</div>
+	<!-- genre 3 slider -->
+	<div class="slider-box">
+		<section class="container-fluid slider">
+			<div>
+				<p style="margin: 0;"><b>Action</b></p>
+			</div>
+			<div id="carouselExampleIndicators4" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">  			  
+			  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			  </button>
+			  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			  </button>
+			  <div id="actionCarousel" class="carousel-inner" style="position: relative; overflow: visible;">
+				<p class="loading-message">Loading Movies...</p>
+			  </div>
+			</div>
+		</section>
+	</div>	
+	<!-- Footer -->
+	<footer>
+		<p>Sai Kiran Reddy Pundru, 2023</p>
+	</footer>
+    <!-- Bootstrap Bundle with Popper -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<!-- Custom JavaScript -->
+	<script>
+		function logout() {
+			window.location = "logout.php";
+		}
+
+		function goToMovie() {
+			window.location = "go_to_video_player.php";
+		}
+		
+		// populate grid
+		function populateRows(genre, carouselId) {
+		
+			// ajax query
+			var jqxhr = $.get("load_top_movies_data.php" + (genre != null ? ('?genre='+String(genre)) : ''), function(data) {
+					// hide loading message
+					$("#" + carouselId + " p.loading-message").hide();
+					// get data
+					result = JSON.parse(data);
+					// process result to fill in grid
+					for (slide = 0; slide < 2; ++slide) {
+						$("#"+carouselId).append('<div class="carousel-item ' + (slide == 0 ? 'active' : '') + '"><section id="rs_' + carouselId + String(slide) + '"></section></div>');
+						// append cards and thumbnails
+						for (var i = slide*5; i < (slide*5) + 5; ++i) {
+							$("#rs_" + carouselId + String(slide)).append('<div id="r' + carouselId + String(i) + '" class="card"></div>');
+							$("#r" + carouselId + String(i)).append('<label class="movie-label">' + result[i]["title"] + '</label><img onclick="goToMovie();" src="' + result[i]["img"] + '" alt="' + result[i]["title"] + '" class="card-img-top">');
+						}		
+					}
+				});
+		}
+		
+		populateRows("", "popularCarousel");
+		populateRows("Horror", "horrorCarousel");
+		populateRows("Comedy", "comedyCarousel");
+		populateRows("Action", "actionCarousel");
+		
+	</script>
+  </body>
+</html>

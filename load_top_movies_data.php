@@ -8,7 +8,7 @@
 		die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
 	}
 
-	$server = "http://34.69.119.77:80/";
+	$server = "http://35.224.133.88:80/";
 	
 	# query API to get top 10 movies from given genre
 	$url = "";

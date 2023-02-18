@@ -1,9 +1,9 @@
 <?php
 
-$host = "mysqlflix.mysql.database.azure.com";
-$username = 'nani';
-$password = ',r"_5?r)y#Xcpd]p';
-$db_name = "apple";
+$host = "host_name.mysql.database.azure.com";
+$username = 'username';
+$password = 'password';
+$db_name = "databasename";
 
 //Initializes MySQLi
 $conn = mysqli_init();

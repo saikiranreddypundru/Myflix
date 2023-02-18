@@ -8,7 +8,7 @@
 		die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
 	}
 
-	$server = "http://35.224.133.88:80/";
+	$server = "serverip/serveraddress";
 	
 	# query API to get top 10 movies from given genre
 	$url = "";
@@ -31,13 +31,13 @@
 	// loop through results and populate a JSON with title and image location
 	foreach ($movies as $m_id) {
 		# get image path
-		$url = 'https://api.themoviedb.org/3/movie/' . strval($m_id) . '/images?api_key=15e383204c1b8a09dbfaaa4c01ed7e17';
+		$url = 'https://api.themoviedb.org/3/movie/' . strval($m_id) . '/images?api_key=*api_key*';
 		$json = file_get_contents($url); // put the contents of the file into a variable
 		$data = json_decode($json); // decode the JSON feed
 		$img_path = "https://image.tmdb.org/t/p/w200/" . $data->backdrops[0]->file_path;
 		
 		# get movie title
-		$url = 'https://api.themoviedb.org/3/movie/' . strval($m_id) . '?api_key=15e383204c1b8a09dbfaaa4c01ed7e17';
+		$url = 'https://api.themoviedb.org/3/movie/' . strval($m_id) . '?api_key=*api_key*';
 		$json = file_get_contents($url); // put the contents of the file into a variable
 		$data = json_decode($json); // decode the JSON feed
 
